@@ -2488,7 +2488,7 @@ input.invalid {
 #prevBtn2 {
   display: none !important;
  }
-.shown{
+.shown, .shown_2{
   display: block;
 }
 .deve-logo{
