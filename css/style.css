@@ -1684,6 +1684,7 @@ width: 85%;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
   }
   .container {
     width: 91%;
@@ -2441,21 +2442,24 @@ input.invalid {
   text-align: center;
  
 }
+.selectedCard_done_1, .selectedCard_done_2{
+  display: none;
+}
 .headerWrapper img{
   width: 70px;
   border-radius: 100%;
 }
-.tab {
+.tab, .tab_2 {
   display: none;
 }
-.tab h2, .headerTitle{
+.tab h2,.tab_2 h2, .headerTitle{
   font-size: 24px;
   font-weight: 500;
   color: #23282C;
   margin: 0;
   text-align: center;
 }
-.tab span, .captionText{
+.tab span, .tab_2 span,.captionText{
   font-size: 14px;
   margin-top: 7px;
   display: block;
@@ -2526,8 +2530,10 @@ input.invalid {
 }
 .copiedLink{
   display: inline-block;
-  border:1px solid rgb(53,196,134);
-  color: rgb(179, 12, 165);
+  border:1px solid #D6D6D6;
+  color: #9C3FE5;
+  border-radius: 6px;
+
 }
 .disable{
   background-color: rgba(53,196,134,0.15);
@@ -2544,17 +2550,24 @@ input.invalid {
 .select-btn:hover{
   border:1px solid rgb(196, 53, 187);
 }
-.tab input{
+.tab input, .tab_2 input{
   font-size: 14px;
   color: #333;
   text-align: left;
 }
-.tab label, .copyHeader{
+.tab label, .tab_2 label, .copyHeader{
   font-size: 14px;
   color: #A5A5A5;
 }
 .input-block{
   position: relative;
+}
+.aya-link{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #9C3FE5;
+  font-size: 14px;
 }
 .input-block button{
   background-color: transparent;
@@ -2609,7 +2622,7 @@ input.invalid {
   color: #fff;
   background-color: #0D162A;
   border-radius: 6px;
-  margin:55px auto 0;
+  margin:20px auto 0;
   font-size: 16px;
 }
 .re-bg-white input:focus{
@@ -2656,6 +2669,93 @@ background-color: #fff;
   color: #A5A5A5;
   text-align: left;
 }
+.address{
+  font-size: 14px;
+  color: #8B8B8B !important;
+  display: flex !important;
+  justify-content: flex-end;
+  align-items: center;
+}
+.address i{
+  margin-left: 14px;
+  color: #23282C;
+}
+.labels{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.labels label{
+  font-size: 14px;
+  color: #A5A5A5;
+}
+.select-coins{
+  color: #23282C;
+    font-size: 16px;
+    border: 0;
+    outline: none;
+}
+.arrow-down{
+  margin:20px auto 0;
+  display: flex;
+  justify-content: center;
+}
+.re-bg-white-2{
+  font-size: 16px !important;
+  color: #23282C !important;
+}
+.approve-btn{
+  width: 220px;
+  height: 54px;
+  border: 1px solid #212121;
+  border-radius: 6px;
+  color: #23282C;
+  font-size: 16px;
+  background-color: transparent;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 38px auto 0;
+}
+.check-icon{
+  margin:0 auto 32px;
+  display: block;
+}
+.tab span a, .tab_2 span a{
+  color: #9C3FE5;
+}
+.back{
+  margin: 78px auto 0;
+  display:flex;
+  justify-content: center;
+  font-size: 14px;
+  color: #8B8B8B;
+}
+.back:hover{
+  color: #9C3FE5;
+}
+.hide{
+  display: none !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2700,11 +2800,11 @@ background-color: #fff;
   .modal-content{
     padding: 30px;
   }
-  .tab h2{
+  .tab h2, .tab_2 h2{
     font-size: 20px;
   }
-  .tab input{
-    font-size: 9px;
+  .tab input, .tab_2 input{
+    font-size: 8px;
   }
   .form-record h6{
     font-size: 12px;
@@ -2715,13 +2815,16 @@ background-color: #fff;
   .form-record p span{
     font-size: 12px;
   }
-  .tab label{
+  .tab label, .tab_2 label{
     font-size: 12px;
   }
-  .tab span{
+  .tab span, .tab_2 span{
     font-size: 12px;
   }
   #nextBtn{
     margin-top: 25px;
+  }
+  .select-btn{
+    width: 100%;
   }
 }

@@ -126,7 +126,7 @@
 </button>
 
 <!-- Modal -->
-<div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" data-bs-backdrop="static" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog ">
     <div class="modal-content">
      
@@ -190,7 +190,7 @@
   </div>
 </div>  <!-- end of first modal --> 
 <!-- second modal -->
-<section class="modal fade " id="exampleModal_2" aria-hidden="true" aria-labelledby="exampleModal_2" tabindex="-1">
+<section class="modal fade" data-bs-backdrop="static" id="exampleModal_2" aria-hidden="true" aria-labelledby="exampleModal_2" tabindex="-1">
   <div class="modal-dialog bg-white">
       <div class="modal-content">
         <section id="regForm2" >
@@ -236,7 +236,72 @@
           </div>
 
           <div class="tab">
-            hhhhhh
+           <span class="address">0xea0A91236...Ec24887e11b55d <i class="bi bi-x-square"></i></span>
+           <div class="labels">
+            <label>From</label>
+            <span class="note">Balance: 2,914.0594</span>
+           </div>
+           <div class="d-flex bg-white re-bg-white px-3">
+            <input type="text" placeholder="25,91" class="flex-grow-1  py-3 ">
+            <div class="flex-shrink-0 ps-3 py-3 border-start">
+              <select class="select-coins" name="coins" id="coins">
+                <option style="background-image:url(images/Group 3451.png)">BNB</option>
+                <option style="background-image:url(images/Group 3451.png)">BUSD</option>
+                
+              </select>
+            </div>
+            
+        </div>
+        <i class="bi bi-arrow-down arrow-down"></i>
+        <div class="labels">
+          <label>To</label>
+         
+         </div>
+         <div class="d-flex bg-white re-bg-white px-3">
+          <input type="text" placeholder="1500" class="flex-grow-1  py-3 ">
+          <div class="flex-shrink-0 ps-3 py-3 re-bg-white-2 border-start">
+          <img src="images/Group 3452.png" alt="coin logo"> DEVE
+          </div>
+          
+      </div>
+      <div class="form-record">
+        <h6>Price:</h6>
+        <p>1 DEVE = 0.289427 BNB <span>(~$20.64)</span></p>
+      </div>
+      <hr>
+      <div class="form-record">
+        <h6>Estimate Balance:</h6>
+        <p>2,000 DEVE <span>(~$2,003.64)</span></p>
+      </div> 
+      <button class="approve-btn">Approve</button>
+          </div>
+
+          <div class="tab">
+           <img class="check-icon" src="images/Group 3453.png" alt="icon">
+           <h2 >Done ! </h2>
+           <span>Your Transaction Is Complete.
+            <br>
+            Get 50 DEVE Per Invitation With<a href="#" >Referral Code.</a>
+           </span>
+           <div class="form-record">
+            <h6>DEVE Balance:</h6>
+            <p>500 DEVE</p>
+          </div>
+          <hr>
+          <div class="form-record">
+            <h6>Contribution:</h6>
+            <p>250 DEVE <span>(~$20.64)</span></p>
+          </div> 
+          <hr>
+          <div class="form-record">
+            <h6>From Referrals:</h6>
+            <p>250 DEVE <span>(~$20.64)</span></p>
+          </div> 
+          
+          <button type="button" onclick="hide_All_Tabs()" class="btn back" data-bs-dismiss="modal">
+            Back To Homepage <i class="bi bi-arrow-right"></i>
+          </button>
+
           </div>
         
          
@@ -266,9 +331,10 @@
   </div>
 </section>
 <!-- third modal -->
-<section class="modal fade" id="exampleModal_3" aria-hidden="true" aria-labelledby="exampleModal_3" tabindex="-1">
+<section class="modal fade" data-bs-backdrop="static" id="exampleModal_3" aria-hidden="true" aria-labelledby="exampleModal_3" tabindex="-1">
   <div class="modal-dialog bg-white">
     <div class="modal-content">
+      <div class="selectedCard_claim_1 ">
       <card-header headerTitle="Claim Your Tokens" captionText="Claim Your Referrals Tokens" avatar="images/Group 3448.png"></card-header>
       <line-info >
         <div class="form-record mt-5">
@@ -284,43 +350,101 @@
         </div>
       </line-info>
 
-      <button class="  btn-claim" style="background-color: rgb(179, 12, 165)">
+      <button onclick="doneTab(1)" class="btn-claim" style="background-color: #9C3FE5">
         Claim <i class="bi bi-arrow-right"></i>
       </button>
+    </div>
+     <!-- next tab -->
+     <div class="selectedCard_done_1">
+      <card-header headerTitle="Done!" captionText="Your Tokens Claimed." avatar="images/Group 3453.png"></card-header>
+      <line-info >
+        <div class="form-record mt-5">
+          <h6 slot="left">DEVE Balance :</h6>
+          <p slot="right">500 DEVE <span>(~$250)</span></p>
+        </div>
+      </line-info>
+      <hr>
+      <line-info >
+        <div class="form-record mt-5">
+          <h6 slot="left">Contribution :</h6>
+          <p slot="right">500 DEVE <span>(~$250)</span></p>
+        </div>
+      </line-info>
+      <hr>
+      <line-info >
+        <div class="form-record mt-5">
+          <h6 slot="left">From Referrals :</h6>
+          <p slot="right">500 DEVE <span>(~$250)</span></p>
+        </div>
+      </line-info>
+      <button type="button" onclick="hideAllTabs(1)" class="btn back" data-bs-dismiss="modal">
+        Back To Homepage <i class="bi bi-arrow-right"></i>
+      </button>
+     </div>
+      
 
     </div>
    
   </div>
 </section>
 <!-- fourth modal -->
-<section class="modal fade " id="exampleModal_4" aria-hidden="true" aria-labelledby="exampleModal_4" tabindex="-1">
+<section class="modal fade" id="exampleModal_4" data-bs-backdrop="static" aria-hidden="true" aria-labelledby="exampleModal_4" tabindex="-1">
   <div class="modal-dialog bg-white">
-    <div class="modal-content">
-      <card-header headerTitle="Referrals" captionText="Use Your Code or Claim Referrals" avatar="images/Group 3448.png"></card-header>
-      <p class="copyHeader">Referral Link</p>
-      <copy-link linkAddress="https//develocity.finance">
-        <p slot="copyIcon">icon<i class="bi bi-x-square"></i></p>
-      </copy-link>
-      <line-info >
-        <div class="form-record mt-5">
-          <h6 slot="left">Your Referrals :</h6>
-          <p slot="right">5 <span>(250 DEVE)</span></p>
-        </div>
-      </line-info>
-      <hr>
-      <line-info >
-        <div class="form-record">
-          <h6 slot="left">Referrals To Claim</h6>
-          <p slot="right">3 <span>(150 DEVE)</span> </p>
-        </div>
-      </line-info>
+    <div class="modal-content" id="myModal">
+      <div class="selectedCard_claim_2 ">
+        <card-header headerTitle="Referrals" captionText="Use Your Code or Claim Referrals" avatar="images/Group 3448.png"></card-header>
+        <p class="copyHeader">Referral Link</p>
+        <copy-link class="aya-link" linkAddress="https//develocity.finance">
+          <p slot="copyIcon">icon<i class="bi bi-x-square"></i></p>
+        </copy-link>
+        <line-info >
+          <div class="form-record mt-5">
+            <h6 slot="left">Your Referrals :</h6>
+            <p slot="right">5 <span>(250 DEVE)</span></p>
+          </div>
+        </line-info>
+        <hr>
+        <line-info >
+          <div class="form-record">
+            <h6 slot="left">Referrals To Claim</h6>
+            <p slot="right">3 <span>(150 DEVE)</span> </p>
+          </div>
+        </line-info>
 
-      <button class="  btn-claim" style="background-color: rgb(179, 12, 165)">
-        Claim <i class="bi bi-arrow-right"></i>
-      </button>
+        <button onclick="doneTab(2)" class="btn-claim" style="background-color: #9C3FE5">
+          Claim <i class="bi bi-arrow-right"></i>
+        </button>
 
+      </div>
+
+       <!-- next tab -->
+       <div class="selectedCard_done_2">
+        <card-header headerTitle="Done!" captionText="Your Referrals Claimed." avatar="images/Group 3453.png"></card-header>
+        <line-info >
+          <div class="form-record mt-5">
+            <h6 slot="left">DEVE Balance :</h6>
+            <p slot="right">500 DEVE <span>(~$250)</span></p>
+          </div>
+        </line-info>
+        <hr>
+        <line-info >
+          <div class="form-record mt-5">
+            <h6 slot="left">Contribution :</h6>
+            <p slot="right">500 DEVE <span>(~$250)</span></p>
+          </div>
+        </line-info>
+        <hr>
+        <line-info >
+          <div class="form-record mt-5">
+            <h6 slot="left">From Referrals :</h6>
+            <p slot="right">500 DEVE <span>(~$250)</span></p>
+          </div>
+        </line-info>
+        <button type="button" onclick="hideAllTabs(2)" class="btn back" data-bs-dismiss="modal">
+          Back To Homepage <i class="bi bi-arrow-right"></i>
+        </button>
+       </div>
     </div>
-   
   </div>
 </section>
 
@@ -349,18 +473,6 @@
         </div>
       </div>
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -431,7 +543,7 @@
 
 
 <!-- script of form-->
-<script>
+  <script>
   var currentTab = 0; // Current tab is set to be the first tab (0)
   showTab(currentTab); // Display the current tab
   
@@ -506,16 +618,9 @@
   }
   </script>
 
-
-
-
-
-
-
   <script>
-    var currentTab2 = 0; // Current tab is set to be the first tab (0)
+  var currentTab2 = 0; // Current tab is set to be the first tab (0)
   showTab(currentTab2); // Display the current tab
-  
   function showTab2(n) {
     // This function will display the specified tab of the form...
     var x = document.getElementsByClassName("tab");
@@ -547,8 +652,9 @@
     // if you have reached the end of the form...
     if (currentTab2 >= x.length) {
       // ... the form gets submitted:
-      document.getElementById("regForm2").submit();
-      return false;
+     
+      document.getElementById("nextBtn2").classList.add("hide");
+     
     }
     // Otherwise, display the correct tab:
     showTab2(currentTab2);
@@ -586,7 +692,8 @@
     x[n].className += " active";
   }
     </script>
-  
+ 
+
  
  <!-- JavaScript Bundle with Popper -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
@@ -596,6 +703,7 @@
     <script type="text/javascript" src="https://unpkg.com/evm-chains@0.2.0/dist/umd/index.min.js"></script>
     <script type="text/javascript" src="https://unpkg.com/@walletconnect/web3-provider@1.7.0/dist/umd/index.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/index.js"></script>
     <!-- bootstrap -->
     
  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
