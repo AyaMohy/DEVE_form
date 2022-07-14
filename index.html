@@ -90,7 +90,7 @@
       </div>
     </header>
 
-    <!-- reham content -->
+    <!-- main content -->
     <div class="container">
       <div class="re-main-content">
         <h1>Buy DEVE <span class="dash">-</span> Invest in Future.</h1>
@@ -127,7 +127,7 @@
 
 <!-- Modal -->
 <div class="modal fade" data-bs-backdrop="static" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog ">
+  <div class="modal-dialog modal-dialog-scrollable">
     <div class="modal-content">
      
       <section id="regForm" >
@@ -156,7 +156,6 @@
             <p>3 <span>(150 DEVE)</span></p>
           </div>
         </div>
-        <!-- aya -->
         <div class="tab">
           <div>
             <h2>Select Your Option</h2>
@@ -189,9 +188,9 @@
     </div>
   </div>
 </div>  <!-- end of first modal --> 
-<!-- second modal -->
+<!-- second modal  -->
 <section class="modal fade" data-bs-backdrop="static" id="exampleModal_2" aria-hidden="true" aria-labelledby="exampleModal_2" tabindex="-1">
-  <div class="modal-dialog bg-white">
+  <div class="modal-dialog bg-white modal-dialog-scrollable">
       <div class="modal-content">
         <section id="regForm2" >
           <!-- One "tab" for each step in the form: -->
@@ -326,7 +325,7 @@
 </section>
 <!-- third modal -->
 <section class="modal fade" data-bs-backdrop="static" id="exampleModal_3" aria-hidden="true" aria-labelledby="exampleModal_3" tabindex="-1">
-  <div class="modal-dialog bg-white">
+  <div class="modal-dialog bg-white modal-dialog-scrollable">
     <div class="modal-content">
       <div class="selectedCard_claim_1 ">
       <card-header headerTitle="Claim Your Tokens" captionText="Claim Your Referrals Tokens" avatar="images/Group 3448.png"></card-header>
@@ -383,13 +382,15 @@
 </section>
 <!-- fourth modal -->
 <section class="modal fade" id="exampleModal_4" data-bs-backdrop="static" aria-hidden="true" aria-labelledby="exampleModal_4" tabindex="-1">
-  <div class="modal-dialog bg-white">
+  <div class="modal-dialog bg-white modal-dialog-scrollable">
     <div class="modal-content" id="myModal">
       <div class="selectedCard_claim_2 ">
         <card-header headerTitle="Referrals" captionText="Use Your Code or Claim Referrals" avatar="images/Group 3448.png"></card-header>
         <p class="copyHeader">Referral Link</p>
-        <copy-link class="aya-link" linkAddress="https//develocity.finance">
-          <p slot="copyIcon">icon<i class="bi bi-x-square"></i></p>
+        <copy-link linkAddress="https//develocity.finance">
+          <p slot="copyIcon">
+            <img src="./images/copy-icon.svg" width="20" alt="" srcset="">
+          </p>
         </copy-link>
         <line-info >
           <div class="form-record mt-5">
@@ -620,9 +621,8 @@ function hide_All_Tabs(){
     for(let i=0; i<x.length-1;i++){
         x[i].style.display='none'
     }
-    document.querySelector('.tab').style.display='block'
-    // window.event.target.parentNode.style.display='none'
-    // document.querySelector('.shown_2').style.display='block'
+    document.querySelector('.tab')[0].style.display='block'
+    document.querySelector('.tab')[1].style.display='none'
 }
 
 var currentTab2 = 0; // Current tab is set to be the first tab (0)

@@ -2522,19 +2522,55 @@ input.invalid {
 .dots{
   display: none;
 }
-.disable,  .select-btn, .copiedLink{
+.form-record{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.copiedWrapper{
+  border: 1px solid #D6D6D6;
+  height: 58px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 10px;
+}
+.copiedLink{
+  color: #9C3FE5;
+  line-height: 58px;
+  border-radius: 6px;
+  margin-bottom: 27px !important; 
+
+}
+.iconCopy{
+  background-color: transparent !important;
+  color: black !important;
+  display: inline-block;
+  line-height: 4 !important;
+  
+}
+.form-record h6{
+  font-size: 14px;
+  color: #8B8B8B;
+  margin: 0;
+}
+.form-record p{
+  font-size: 14px;
+  color: #333;
+  display: flex;
+  margin: 0;
+  align-items: center;
+}
+.form-record p span{
+  color: #888;
+  margin: 0;
+}
+.disable,  .select-btn{
   width: 360px;
   height: 58px;
   border-radius: 6px;
   margin-bottom: 27px !important; 
 }
-.copiedLink{
-  display: inline-block;
-  border:1px solid #D6D6D6;
-  color: #9C3FE5;
-  border-radius: 6px;
 
-}
 .disable{
   background-color: rgba(53,196,134,0.15);
   border:1px solid rgb(53,196,134);
@@ -2569,6 +2605,7 @@ input.invalid {
   color: #9C3FE5;
   font-size: 14px;
 }
+
 .input-block button{
   background-color: transparent;
   border: 0;
@@ -2577,30 +2614,10 @@ input.invalid {
   right:20px;
   top:20px
 }
-.input-block i{
- color: #333;
+.input-block i, .iconCopy i{
+ color: #333 !important;
 }
-.form-record{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.form-record h6{
-  font-size: 14px;
-  color: #8B8B8B;
-  margin: 0;
-}
-.form-record p{
-  font-size: 14px;
-  color: #333;
-  display: flex;
-  margin: 0;
-  align-items: center;
-}
-.form-record p span{
-  color: #888;
-  margin: 0;
-}
+
 #nextBtn, .btn-claim{
   width: 220px;
   height: 54px;
@@ -2828,3 +2845,7 @@ background-color: #fff;
     width: 100%;
   }
 }
+
+
+
+
